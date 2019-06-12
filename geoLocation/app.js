@@ -5,15 +5,17 @@ var getLocation = document.getElementById("yourLocation");
 
 //Next, I need to create a function that initiates the API when the button gets clicked
 function findMe() {
-    if(navigator.getLocation) {
-        navigator.geolocation.getCurrentPosition(displayPosition)
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(displayPosition);
     } 
-    //On click, the browser should get the location. If it cannot, it will write to the HTML <p> tag and say "Not Available"
+    //On click, the browser should get the location. If it cannot, it will send an alert saying "Not Available"
     else {
-        yourLocation.innerHTML = "Not Available"
+        alert("Not Available");
     }
 }
 
 function displayPosition(position) {
-    yourLocation.innerHTML = "Longitude : " + position.coords.longitude + "Latitude: " + position.coords.latitude 
+    yourLocation.innerHTML = "Longitude : " + position.coords.longitude + " Latitude: " + position.coords.latitude;
 }
+
+document.selec
