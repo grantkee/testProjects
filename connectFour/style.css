@@ -1,0 +1,41 @@
+#board {
+    display: grid;
+    grid-template-columns:auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    border: 1px solid black;
+    width: 358px;
+  }
+  
+  .column {
+    width: 50px;
+    height: 300px;
+    background-color: #f2f2f2;
+    border-right: 1px solid #808080;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .disc {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .black {
+    background-color: black;
+  }
+  
+  .row {
+    clear: both;
+  }
+  
+  #announce-winner {
+    clear: both;
+    font-size: 50px;
+  }
+  
